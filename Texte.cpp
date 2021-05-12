@@ -6,7 +6,7 @@
 #include "Texte.h"
 
 void Texte::render() {
-    std::cout << "Texte";
+    std::cout << "Texte" << std::endl;
 }
 
 Texte::Texte(double x, double y) : Composant(x, y) {}

@@ -6,7 +6,7 @@
 #include "GeneratorSVG.h"
 
 void GeneratorSVG::generate() {
-    std::cout << "Generate a SVG Graph";
+    std::cout << "Generate a SVG Graph" << std::endl;
 }
 
 GeneratorSVG::GeneratorSVG() = default;

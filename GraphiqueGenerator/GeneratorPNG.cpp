@@ -6,7 +6,7 @@
 #include "GeneratorPNG.h"
 
 void GeneratorPNG::generate() {
-    std::cout << "Generate a PNG Graph";
+    std::cout << "Generate a PNG Graph" << std::endl;
 }
 
 GeneratorPNG::GeneratorPNG() = default;

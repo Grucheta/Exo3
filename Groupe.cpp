@@ -7,7 +7,7 @@
 #include "Groupe.h"
 
 void Groupe::render() {
-    std::cout << "Groupe";
+    std::cout << "Groupe" << std::endl;
 }
 
 

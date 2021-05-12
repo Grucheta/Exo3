@@ -6,7 +6,7 @@
 #include "Rectangle.h"
 
 void Rectangle::render() {
-    std::cout << "Rectangle";
+    std::cout << "Rectangle" << std::endl;
 }
 
 Rectangle::Rectangle(double x, double y) : Composant(x, y) {}

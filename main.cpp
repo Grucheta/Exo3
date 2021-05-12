@@ -12,22 +12,28 @@ int main() {
         std::cout << "1 . SVG" << std::endl;
         std::cout << "2 . PNG" << std::endl;
         std::getline(std::cin, input);
-
     }
 
     Graphique graphique = Graphique(input);
 
 
-    Rectangle rectangle1 = Rectangle(8, 2);
+    Composant *rectangle1 = new Rectangle(8, 2);
     Composant *rectangle2 = new Rectangle(1,3);
-    Texte texte1 = Texte();
+    Composant *texte1 = new Texte(1,3);
 
-    std::cout << rectangle2->getX() << "\n";
+    graphique.composant_push_back(rectangle2);
+    graphique.composant_push_back(rectangle1);
+    graphique.composant_push_back(texte1);
 
-    std::cout << rectangle1.getX() << "\n";
-    std::cout << texte1.getX() << "\n";
+    graphique.getGeneratorStrategy()->generate();
 
+    graphique.displayGraph();
+
+
+
+    delete rectangle1;
     delete rectangle2;
+    delete texte1;
 
     return 0;
 }

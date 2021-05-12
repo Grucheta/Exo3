@@ -18,12 +18,16 @@ public:
 
     virtual ~Graphique();
 
-    const std::vector<Composant> &getComposants() const;
+    const std::vector<Composant *> &getComposants() const;
 
     GeneratorStrategy *getGeneratorStrategy() const;
 
+    void composant_push_back (Composant* composant);
+
+    void displayGraph ();
+
 private:
-    std::vector<Composant> composants;
+    std::vector<Composant*> composants;
     GeneratorStrategy* generatorStrategy;
 
 

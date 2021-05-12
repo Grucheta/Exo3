@@ -24,6 +24,8 @@ public:
 
     virtual ~Composant();
 
+    void displayComposant();
+
 protected:
     double x;
     double y;

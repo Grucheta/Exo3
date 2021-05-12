@@ -7,7 +7,7 @@
 
 
 class GeneratorStrategy {
-
+//create new class implementing GeneratorStrategy to add new graphic type
 public:
     virtual void generate() = 0;
 

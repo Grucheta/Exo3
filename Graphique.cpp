@@ -19,10 +19,25 @@ Graphique::~Graphique() {
     delete this->generatorStrategy;
 }
 
-const std::vector<Composant> &Graphique::getComposants() const {
-    return composants;
-}
+
 
 GeneratorStrategy *Graphique::getGeneratorStrategy() const {
     return generatorStrategy;
 }
+
+
+const std::vector<Composant *> &Graphique::getComposants() const {
+    return composants;
+}
+
+void Graphique::composant_push_back(Composant* composant) {
+    composants.push_back(composant);
+}
+
+void Graphique::displayGraph() {
+    for (auto* composant : composants) {
+        composant->displayComposant();
+        std::cout<< "\n";
+    }
+}
+
