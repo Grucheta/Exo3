@@ -3,11 +3,26 @@
 //
 
 #include "Graphique.h"
+#include "GraphiqueGenerator/GeneratorPNG.h"
+#include "GraphiqueGenerator/GeneratorSVG.h"
+#include <iostream>
 
 Graphique::Graphique(const std::string& input) {
     if (input == "1") {
-        std::cout << input;
+        generatorStrategy = new GeneratorSVG();
     } else if (input == "2") {
-        std::cout << input;
+        generatorStrategy = new GeneratorPNG();
     }
+}
+
+Graphique::~Graphique() {
+    delete this->generatorStrategy;
+}
+
+const std::vector<Composant> &Graphique::getComposants() const {
+    return composants;
+}
+
+GeneratorStrategy *Graphique::getGeneratorStrategy() const {
+    return generatorStrategy;
 }

@@ -10,6 +10,8 @@
 
 class GeneratorPNG : public GeneratorStrategy{
 public:
+    GeneratorPNG();
+
     void generate() override;
 };
 

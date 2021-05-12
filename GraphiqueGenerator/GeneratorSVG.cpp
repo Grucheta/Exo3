@@ -8,3 +8,5 @@
 void GeneratorSVG::generate() {
     std::cout << "Generate a SVG Graph";
 }
+
+GeneratorSVG::GeneratorSVG() = default;

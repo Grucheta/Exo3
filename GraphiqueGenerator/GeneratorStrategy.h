@@ -5,10 +5,15 @@
 #ifndef EXO3_GENERATORSTRATEGY_H
 #define EXO3_GENERATORSTRATEGY_H
 
+
 class GeneratorStrategy {
+
 public:
     virtual void generate() = 0;
 
-}
+    virtual ~GeneratorStrategy();
+
+};
+
 
 #endif //EXO3_GENERATORSTRATEGY_H

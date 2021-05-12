@@ -8,3 +8,5 @@
 void GeneratorPNG::generate() {
     std::cout << "Generate a PNG Graph";
 }
+
+GeneratorPNG::GeneratorPNG() = default;

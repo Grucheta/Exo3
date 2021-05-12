@@ -5,6 +5,7 @@
 #ifndef EXO3_GRAPHIQUE_H
 #include <vector>
 #include "Composant.h"
+#include "GraphiqueGenerator/GeneratorStrategy.h"
 
 #define EXO3_GRAPHIQUE_H
 
@@ -13,10 +14,17 @@
 
 class Graphique {
 public:
-    Graphique(const std::string& input);
+    explicit Graphique(const std::string& input);
+
+    virtual ~Graphique();
+
+    const std::vector<Composant> &getComposants() const;
+
+    GeneratorStrategy *getGeneratorStrategy() const;
 
 private:
     std::vector<Composant> composants;
+    GeneratorStrategy* generatorStrategy;
 
 
 };

@@ -10,6 +10,7 @@
 
 class GeneratorSVG : public GeneratorStrategy {
 public:
+    GeneratorSVG();
     void generate() override;
 };
 
